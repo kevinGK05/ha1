@@ -124,5 +124,17 @@ class CalculatorTest {
 
         assertEquals(expected, actual);
     }
+    @Test
+    @DisplayName("should place a decimal number after the operation")
+    void dotKeyTest(){
+        Calculator c = new Calculator();
+        c.pressDigitKey(1);
+        c.pressBinaryOperationKey("+");
+        c.pressDotKey();
+        c.pressDigitKey(2);
+
+        String actual = c.readScreen();
+        assertEquals("0.2", actual);
+    }
 }
 
