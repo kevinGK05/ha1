@@ -130,6 +130,7 @@ class CalculatorTest {
         Calculator c = new Calculator();
         c.pressDigitKey(1);
         c.pressBinaryOperationKey("+");
+        c.pressDigitKey(0);
         c.pressDotKey();
         c.pressDigitKey(2);
 
